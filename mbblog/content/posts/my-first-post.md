@@ -87,7 +87,7 @@ The theme will dictate the look and flexibility of the website.
 You can choose one [here](https://themes.gohugo.io/).
 I ended up choosing PaperMod. 
 
-Go to the theme's github page, which you can usually get to by clicking download.
+Go to the theme's github page, which you can usually get to by clicking Download.
 Cd into blog/mBblog and git clone the theme into the theme folder.  In my case, I used:
 
 ```
@@ -110,7 +110,7 @@ For Github Pages, this would be the name of the deployment repo.
 So in my case, ' baseURL = "https://malcolmBurdorf.github.io/" '
 
 Now, we want to use our deployment repo to house the static assets that our storage repo generates. 
-So, add the deployment repo as a submodule of the storage repo using:
+So, add the deployment repo as a submodule of the storage repo using from blog/mBblog:
 
 ```
 git submodule add -b main https://github.com/malcolmBurdorf/malcolmBurdorf.github.io.git public
@@ -121,7 +121,7 @@ This will git clone our deployment repo into the new folder public.
 
 ### Step 6: Generate static files
 
-Now in blog, generate the static files using the name of your theme. In my case:
+Now also in blog/mBblog, generate the static files using the name of your theme. In my case:
 
 ```
 hugo -t PaperMod
@@ -133,7 +133,7 @@ This should automatically generate static files into the public folder.
 ### Step 7: Push
 
 We can now push everything to their respective repos.
-From blog, run:
+In blog and blog/mBblog/public, run:
 
 ```
 git add .
@@ -141,5 +141,12 @@ git commit -m "init commit"
 git push origin main
 ```
 
-And we're done! Just go to Settings->Pages, switch the Source to main, click Save, and your website url should pop up. 
+Once for the storage repo and once for the deployment submodule, since it is pointing to our second repo.
+
+And we're done! Just go to Settings->Pages, switch the Source to main, click Save, and your website url should pop up.
+
+This has just been the bare minimum to get a website created and hosted with Hugo and Github Pages.
+If you would like the other accoutrements, the previously mentioned resources are good places to start.
+
+[Here](https://support.atlassian.com/jira-software-cloud/docs/markdown-and-keyboard-shortcuts/), [are](https://www.markdownguide.org/basic-syntax/) some Markdown tables and [this](https://gohugo.io/content-management/shortcodes/) explains Hugo shortcodes.
 
