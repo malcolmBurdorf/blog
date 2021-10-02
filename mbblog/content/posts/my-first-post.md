@@ -3,4 +3,111 @@ title: "My First Post"
 date: 2021-10-02T01:40:07+01:00
 ---
 
-Hello.  This is my first post.
+Hello.  This is my first post. 
+I would like to provide some information on how I created this website with Hugo and deployed it with Github Pages. 
+Hopefully, this will be helpful for people like me, or my future self, since I just went through the process.  This will be specifically for Windows, since that is the OS that I used.
+
+Firstly, this will basically be a summary of both the [Hugo Quick Start page](https://gohugo.io/getting-started/quick-start/) and 
+[The Simple Engineer's video](https://www.youtube.com/watch?v=LIFvgrRxdt4), so please look at those, if you would like more information.
+
+(btw markdown shortcode {_{_< youtube LIFvgrRxdt4 >}} would embed the video into this webpage)  
+&nbsp; 
+
+### Prerequisites:
+
+- Install [Git](https://git-scm.com/download/win)
+
+- Setup a [Github account](https://github.com/join)
+
+- Preferably, have [Vim](https://neovim.io/) to edit files, otherwise Notepad  
+&nbsp;
+ 
+
+### Step 1: Install Hugo
+
+I didn't have any of the package management tools listed, so I tried Chocolatey, which didn't work.
+
+
+I then tried Scoop, which did work, so install [Scoop](https://scoop.sh/).
+
+
+I would make sure the execution policy is correct (to enable Powershell), 
+by running this in the Powershell:
+```
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
+
+I then ran this expression to install Scoop:
+```
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh') 
+```
+
+Now, we can install Hugo (the extended version) with Scoop:
+```
+scoop install hugo-extended
+```
+
+To verify it's installed run: 
+```
+hugo version
+```
+&nbsp; 
+ 
+### Step 2: Create website repositories
+
+(Here, I used the method from The Simple Engineer to setup the sub modules. )
+In order for our website to be hosted for others to see, we can use Github Pages.
+We will use one repository for storing our website content, 
+and a different repository to deploy our website. 
+
+Go to your [github homepage](https://github.com/), 
+and create two new public repositories with README documents.
+The first one will be our storage repository, which I named 'blog'.
+The second one will be our deployment repository, which will I named 'malcolmBurdorf.github.io'.  
+&nbsp; 
+ 
+
+ 
+
+### Step 3: Create the Website
+
+Git clone the storage repo and cd into it.  I then ran:
+
+```
+hugo new site mBblog
+```
+
+to create the skeleton files for the site in the folder mBblog.  
+&nbsp;
+ 
+
+### Step 4: Pick a Theme
+
+The theme will dictate the look and flexibility of the website. 
+You can choose one [here](https://themes.gohugo.io/).
+I ended up choosing PaperMod. 
+
+Go to the theme's github page, which you can usually get to by clicking download.
+Cd into blog/mBblog and git clone the theme into the theme folder.  In my case, I used:
+
+```
+git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+```
+
+You then need to set 'theme = PaperMod' in your config file. 
+You can do this manually (in Notepad or Vim) or run:
+
+```
+echo theme = "PaperMod" >> config.toml
+```
+&nbsp;
+
+
+### Step 5: Add deployment repo as submodule
+ 
+You also need to change the baseURL. 
+For Github Pages, this would be the name of the deployment repo. 
+So in my case, ' baseURL = "https://malcolmBurdorf.github.io/" '
+
+Now, we want to use our deployment repo to house the static assets that our storage repo generates. 
+
