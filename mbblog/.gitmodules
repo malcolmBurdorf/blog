@@ -1,0 +1,27 @@
+[submodule "hugo-theme-wave"]
+	path = hugo-theme-wave
+	url = https://github.com/syui/hugo-theme-wave
+[submodule "themes/wave"]
+	path = themes/wave
+	url = https://github.com/syui/hugo-theme-wave.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/zzo"]
+	path = themes/zzo
+	url = https://github.com/zzossig/hugo-theme-zzo
+[submodule "themes/pickles"]
+	path = themes/pickles
+	url = https://github.com/mismith0227/hugo_theme_pickles
+[submodule "themes/binario"]
+	path = themes/binario
+	url = https://github.com/Vimux/Binario.git
+[submodule "themes/pickle"]
+	path = themes/pickle
+	url = https://github.com/mismith0227/hugo_theme_pickles.git
+[submodule "themes/monopriv"]
+	path = themes/monopriv
+	url = https://gitlab.com/kskarthik/monopriv.git
+[submodule "themes/contrast"]
+	path = themes/contrast
+	url = https://github.com/niklasbuschmann/contrast-hugo.git

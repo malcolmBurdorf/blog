@@ -1,0 +1,8 @@
+[submodule "mbblog/malcolmBurdorf.github.io"]
+	path = mbblog/public
+	url = https://github.com/malcolmBurdorf/malcolmBurdorf.github.io.git
+	branch = main
+[submodule "mbblog/public"]
+	path = mbblog/public
+	url = https://github.com/malcolmBurdorf/malcolmBurdorf.github.io.git
+	branch = main
