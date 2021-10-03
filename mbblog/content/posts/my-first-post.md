@@ -67,7 +67,7 @@ and create two new public repositories with README documents.
 The first one will be our storage repository, which I named 'blog'.
 The second one will be our deployment repository, which will I named 'malcolmBurdorf.github.io'.  
 It is important, that your deployment repository ends with '.github.io', since that will be the website domain ending.  
-[With additional work, GitHub Pages allows you to change your domain.](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+[With additional work, GitHub Pages allows you to change your domain.](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)  
 &nbsp; 
  
 
@@ -82,7 +82,7 @@ hugo new site mBblog
 ```
 
 to create the skeleton files for the site in the folder 'mBblog'. 
-(Name this folder whatever you like.)
+(Name this folder whatever you like.)  
 &nbsp;
  
 
@@ -132,7 +132,7 @@ Now also in blog/mBblog, generate the static files using the name of your theme.
 hugo -t PaperMod
 ```
 
-This should automatically generate static files into the 'public' folder.
+This should automatically generate static files into the 'public' folder.  
 &nbsp; 
 
 ### Step 7: Push
