@@ -3,12 +3,6 @@ languageCode = "en-us"
 title = "Malcolm Burdorf blog"
 theme = "PaperMod"
 
-[[menu.main]]
-identifier = "about"
-name = "about"
-pre = "<i class='fa fa-heart'></i>"
-url = "/about/"
-weight = -10
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
