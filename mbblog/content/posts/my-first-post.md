@@ -65,7 +65,7 @@ and another repository to deploy our website.
 Go to your [GitHub homepage](https://github.com/), 
 and create two new public repositories with README documents.
 The first one will be our storage repository, which I named 'blog'.
-The second one will be our deployment repository, which will I named 'malcolmBurdorf.github.io'.  
+The second one will be our deployment repository, which I named 'malcolmBurdorf.github.io'.  
 It is important, that your deployment repository ends with '.github.io', since that will be the website domain ending.  
 [With additional work, GitHub Pages allows you to change your domain.](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)  
 &nbsp; 
